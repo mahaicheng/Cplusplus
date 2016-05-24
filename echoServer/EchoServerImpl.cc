@@ -27,7 +27,8 @@ void EchoServerImpl::onConnection(const TcpConnectionPtr &conn)
     }
 }
 
-void EchoServerImpl::onMessage(const TcpConnectionPtr &conn, Buffer *buf, Timestamp time)
+void EchoServerImpl::onMessage(const TcpConnectionPtr &conn, \
+								Buffer *buf, Timestamp time)
 {
     muduo::string msg(buf->retrieveAllAsString());
 	if (msg.find("exit") != std::string::npos && msg.size() == 6)
