@@ -6,22 +6,11 @@
  ************************************************************************/
 
 #include"EchoServer.h"
-#include"Impl.h"
 
-#include<utility>
-#include<muduo/net/EventLoop.h>
-#include<muduo/net/InetAddress.h>
-#include<muduo/net/TcpServer.h>
-
-using namespace muduo;
 using namespace muduo::net;
-using namespace std;
-using namespace placeholders;
 
-
-
-EchoServer::EchoServer(EventLoop *loop, const InetAddress &listenAddr, const muduo::string &name):
-		impl(make_shared<Impl>(loop, listenAddr, name))
+EchoServer::EchoServer(muduo::net::EventLoop *loop, const muduo::net::InetAddress &listenAddr, const muduo::string &name):
+		impl(std::make_shared<EchoServerImpl>(loop, listenAddr, name))
 { 
 	
 }

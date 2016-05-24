@@ -5,11 +5,10 @@
 	> 创建日期: 2016年05月24日 星期二 16时22分08秒
  ************************************************************************/
 
-#include<iostream>
 #include"EchoServer.h"
+#include<muduo/net/EventLoop.h>
+#include<muduo/net/InetAddress.h>
 
-using namespace std;
-using namespace muduo;
 using namespace muduo::net;
 
 int main()
