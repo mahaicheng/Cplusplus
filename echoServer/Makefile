@@ -15,5 +15,4 @@ EchoServerImpl.o :
 	$(CC) $(CC_FLAG) -c EchoServerImpl.cc $(link_library)
 
 clean:
-	rm $(OBJECT)
 	rm $(EXECUABLE)
