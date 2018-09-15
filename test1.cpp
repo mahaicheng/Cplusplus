@@ -1,6 +1,6 @@
-#include<iostream>
-#include<sstream>
-#include<string>
+#include <iostream>
+#include <sstream>
+#include <string>
 
 using namespace std;
 
@@ -9,21 +9,21 @@ int main()
     int a, b;
     stringstream ss;
 
-    while(cin >> a >> b)
+    while (cin >> a >> b)
     {
         string bStr;
         ss.clear();
         ss << b;
         ss >> bStr;
 
-        while(true)
+        while (true)
         {
             ss.clear();
             string aStr;
             ss << a;
             ss >> aStr;
 
-            if(aStr.find(bStr) != string::npos)
+            if (aStr.find(bStr) != string::npos)
             {
                 cout << a << endl;
                 break;

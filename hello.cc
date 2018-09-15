@@ -5,8 +5,8 @@
 	> Created Time: 2016年07月21日 星期四 23时40分53秒
  ************************************************************************/
 
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 using namespace std;
 
 enum class Sex
@@ -18,24 +18,25 @@ enum class Sex
 
 class Person
 {
-    friend ostream& operator<<(ostream &, const Person &);
-public:
-    Person(string name, int age, Sex sex = Sex::SECRECT) : m_name(name), m_age(age), m_sex(sex) {  }
+    friend ostream &operator<<(ostream &, const Person &);
+
+  public:
+    Person(string name, int age, Sex sex = Sex::SECRECT) : m_name(name), m_age(age), m_sex(sex) {}
     virtual ~Person()
     {
         cout << m_name << " say bye-bye to you..." << endl;
     }
-private:
+
+  private:
     string m_name;
     int m_age;
     Sex m_sex;
 };
 
-ostream& operator<<(ostream &os, const Person &person)
+ostream &operator<<(ostream &os, const Person &person)
 {
-    os  << person.m_name << ", " << person.m_age << (person.m_age == 1 ? " year" : " years")\
-        << " old "  <<  (person.m_sex == Sex::MAN ? ", man" : \
-                        (person.m_sex == Sex::WOMAN ? ", woman" : ""));
+    os << person.m_name << ", " << person.m_age << (person.m_age == 1 ? " year" : " years")
+       << " old " << (person.m_sex == Sex::MAN ? ", man" : (person.m_sex == Sex::WOMAN ? ", woman" : ""));
     return os;
 }
 
@@ -70,5 +71,6 @@ int main()
 
     Person MHC(name, age, sex);
 
-    cout << endl << MHC << endl;
+    cout << endl
+         << MHC << endl;
 }

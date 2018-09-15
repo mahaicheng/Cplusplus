@@ -5,17 +5,17 @@
 	> 创建日期: 2016年05月13日 星期五 20时16分00秒
  ************************************************************************/
 
-#include<iostream>
-#include<thread>
-#include<string>
-#include<utility>
-#include<mutex>
+#include <iostream>
+#include <thread>
+#include <string>
+#include <utility>
+#include <mutex>
 
 using namespace std;
 
 mutex mtx;
 
-ostream& print(ostream &os, const string &str, int x)
+ostream &print(ostream &os, const string &str, int x)
 {
     lock_guard<mutex> lkgrd(mtx);
     for (int i = 0; i < 5; ++i)

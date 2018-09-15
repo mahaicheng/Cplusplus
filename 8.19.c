@@ -5,14 +5,14 @@
 	> 创建日期: 2016年04月04日 星期一 11时40分36秒
  ************************************************************************/
 
-#include<stdio.h>
-#include<unistd.h>
+#include <stdio.h>
+#include <unistd.h>
 
 int main()
 {
     int n;
     scanf("%d", &n);
-    for(int i = 0; i < n; ++i)
+    for (int i = 0; i < n; ++i)
     {
         fork();
     }

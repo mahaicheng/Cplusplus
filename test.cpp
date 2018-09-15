@@ -5,7 +5,7 @@
 	> 创建日期: 2016年03月27日 星期日 09时41分45秒
  ************************************************************************/
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int main()
@@ -13,10 +13,10 @@ int main()
     int n = 0;
     float x = 1, y1 = 2.1 / 1.9, y2 = 1.9 / 2.1;
 
-    for(int i = 1; i < 22; ++i)
+    for (int i = 1; i < 22; ++i)
         x = x * y1;
 
-    while(x != 1.0)
+    while (x != 1.0)
     {
         x = x * y2;
         n++;

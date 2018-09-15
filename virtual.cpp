@@ -1,12 +1,12 @@
-#include<iostream>
-#include<memory>
-#include<vector>
+#include <iostream>
+#include <memory>
+#include <vector>
 
 using namespace std;
 
 class X
 {
-public:
+  public:
     virtual void f()
     {
         cout << "X::f()" << endl;
@@ -15,7 +15,7 @@ public:
 
 class A : public X
 {
-public:
+  public:
     void f()
     {
         cout << "A::f()" << endl;
@@ -24,7 +24,7 @@ public:
 
 class B : public X
 {
-public:
+  public:
     void f()
     {
         cout << "B::f()" << endl;
@@ -33,7 +33,7 @@ public:
 
 class C : public A
 {
-public:
+  public:
     void f()
     {
         cout << "C::f()" << endl;
@@ -42,7 +42,7 @@ public:
 
 class E : public X
 {
-public:
+  public:
     void f()
     {
         cout << "E::f()" << endl;
@@ -51,7 +51,7 @@ public:
 
 class F : public E
 {
-public:
+  public:
     void f()
     {
         cout << "F::f()" << endl;
@@ -79,9 +79,9 @@ int main()
     vec.push_back(make_shared<E>());
     vec.push_back(make_shared<F>());
 
-    for(const auto &sp : vec)
+    for (const auto &sp : vec)
     {
-        shared_ptr<C> ptr(static_cast<C*>(sp.get()));
+        shared_ptr<C> ptr(static_cast<C *>(sp.get()));
         ptr->f();
     }
 }

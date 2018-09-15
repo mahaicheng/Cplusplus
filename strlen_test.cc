@@ -5,8 +5,8 @@
 	> 创建日期: 2016年05月24日 星期二 15时34分11秒
  ************************************************************************/
 
-#include<iostream>
-#include<cstring>
+#include <iostream>
+#include <cstring>
 using namespace std;
 
 int main()

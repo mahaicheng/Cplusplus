@@ -5,10 +5,10 @@
 	> 创建日期: 2016年05月10日 星期二 19时13分06秒
  ************************************************************************/
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-template<size_t N>
+template <size_t N>
 void print(const char (&array)[N])
 {
     cout << "using void(const char (&array)[N]) version" << endl;

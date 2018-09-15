@@ -5,10 +5,10 @@
 	> 创建日期: 2016年04月21日 星期四 16时22分00秒
  ************************************************************************/
 
-#include<stdio.h>
-#include<apue.h>
+#include <stdio.h>
+#include <apue.h>
 
 int main()
 {
-    return 0;
+	return 0;
 }

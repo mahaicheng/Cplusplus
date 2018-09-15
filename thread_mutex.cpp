@@ -5,13 +5,13 @@
 	> 创建日期: 2016年03月25日 星期五 10时25分16秒
  ************************************************************************/
 
-#include<iostream>
-#include<thread>
-#include<mutex>
-#include<string>
-#include<functional>
-#include<unistd.h>
-#include<future>
+#include <iostream>
+#include <thread>
+#include <mutex>
+#include <string>
+#include <functional>
+#include <unistd.h>
+#include <future>
 
 using namespace std;
 
@@ -20,7 +20,7 @@ mutex mtx;
 int thrd_fn(int &num, int c)
 {
     lock_guard<mutex> lg(mtx);
-    for(int i = 0; i < 10; ++i)
+    for (int i = 0; i < 10; ++i)
     {
         cout << "thread " << c << ": " << num++ << endl;
     }

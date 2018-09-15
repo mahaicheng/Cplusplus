@@ -1,16 +1,17 @@
-#include<iostream>
-#include<mutex>
-#include<thread>
-#include<functional>
-#include<memory>
+#include <iostream>
+#include <mutex>
+#include <thread>
+#include <functional>
+#include <memory>
 
 using namespace std;
 
 class A
 {
-    friend ostream& operator<<(ostream &os, const A &rhs);
-public:
-    A(int *x_ = new int(0), double *y_ = new double(0.0)) : x(x_), y(y_) { }
+    friend ostream &operator<<(ostream &os, const A &rhs);
+
+  public:
+    A(int *x_ = new int(0), double *y_ = new double(0.0)) : x(x_), y(y_) {}
     ~A()
     {
         if (x != nullptr)
@@ -30,12 +31,13 @@ public:
         y = rhs.y;
         rhs.y = nullptr;
     }
-private:
+
+  private:
     int *x;
     double *y;
 };
 
-ostream& operator<<(ostream &os, const A &rhs)
+ostream &operator<<(ostream &os, const A &rhs)
 {
     if (rhs.x == nullptr)
         os << "nullptr";
@@ -52,10 +54,10 @@ ostream& operator<<(ostream &os, const A &rhs)
     return os;
 }
 
-template<typename T>
+template <typename T>
 class Shared_ptr final
 {
-public:
+  public:
     explicit Shared_ptr(T *m) : ptr(m)
     {
         mtx = new mutex();
@@ -83,7 +85,7 @@ public:
         }
     }
 
-private:
+  private:
     T *ptr;
     mutex *mtx;
     int *ref_count;

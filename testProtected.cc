@@ -5,25 +5,27 @@
 	> 创建日期: 2016年05月16日 星期一 16时11分15秒
  ************************************************************************/
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 class Base
 {
-public:
-    Base(int a = 9) : a_(a) {  }
+  public:
+    Base(int a = 9) : a_(a) {}
     virtual ~Base() = default;
-protected:
+
+  protected:
     int a_;
-    int& a() { return a_; }
+    int &a() { return a_; }
 };
 
 class Derived : public Base
 {
-public:
-    Derived(int b) : b_(b) {  }
-    int& a() { return b_; }
-private:
+  public:
+    Derived(int b) : b_(b) {}
+    int &a() { return b_; }
+
+  private:
     int b_;
 };
 

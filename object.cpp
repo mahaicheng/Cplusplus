@@ -5,13 +5,13 @@
 	> 创建日期: 2016年04月22日 星期五 09时18分50秒
  ************************************************************************/
 
-#include<iostream>
-#include<cstdlib>
+#include <iostream>
+#include <cstdlib>
 using namespace std;
 
 class Object
 {
-public:
+  public:
     Object()
     {
         cout << "Hello, I am born." << endl;
@@ -28,7 +28,7 @@ public:
 
 int main()
 {
-    Object *ObjectA = (Object*)malloc(sizeof(Object));
+    Object *ObjectA = (Object *)malloc(sizeof(Object));
     ObjectA->hello();
     free(ObjectA);
     ObjectA = nullptr;

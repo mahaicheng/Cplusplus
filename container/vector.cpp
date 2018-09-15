@@ -1,12 +1,12 @@
 namespace hchma
 {
-    template<typename T>
-    class vector
-    {
-    typedef T* iterator;
-    typedef T const* const_iterator;
-    
-    public:
+template <typename T>
+class vector
+{
+    typedef T *iterator;
+    typedef T const *const_iterator;
+
+  public:
     vector()
     {
         _capacity = 16;
@@ -32,11 +32,11 @@ namespace hchma
     {
         if (_array != nullptr)
         {
-            delete []_array;
+            delete[] _array;
             _array = nullptr;
         }
     }
-    const vector& operator=(const vector &rhs)
+    const vector &operator=(const vector &rhs)
     {
         if (this == &rhs)
         {
@@ -55,18 +55,18 @@ namespace hchma
         _array = tmp;
         if (oldPtr != nullptr)
         {
-            delete []oldPtr;
+            delete[] oldPtr;
             oldPtr = nullptr;
         }
         return *this;
     }
 
-    T& operator[](size_t pos)
+    T &operator[](size_t pos)
     {
         return _array[pos];
     }
 
-    const T& operator[](size_t pos) const
+    const T &operator[](size_t pos) const
     {
         return _array[pos];
     }
@@ -95,22 +95,22 @@ namespace hchma
         --_size;
         return result;
     }
-    const T& front() const
+    const T &front() const
     {
         return _array[0];
     }
-    T& front()
+    T &front()
     {
         return _array[0];
     }
-    const T& back() const
+    const T &back() const
     {
-        return _array[_size-1];
+        return _array[_size - 1];
     }
 
-    T& back()
+    T &back()
     {
-        return _array[_size-1];
+        return _array[_size - 1];
     }
 
     iteator begin()
@@ -129,9 +129,10 @@ namespace hchma
     {
         return &_array[_size];
     }
-    private:
+
+  private:
     int _size;
     int _capacity;
     T *_array;
-    };
-}
+};
+} // namespace hchma

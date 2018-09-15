@@ -1,36 +1,37 @@
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 
 using namespace std;
 
-template<typename T>
+template <typename T>
 class Queue
 {
-private:
-    template<typename T>
+  private:
+    template <typename T>
     class Node
     {
-    public:
+      public:
         Node() = default;
         Node(T value, Node *pre = nullptr, Node *next = nullptr);
         Node(const Node &item);
         ~Node();
-        Node& operator=(const Node &item);
+        Node &operator=(const Node &item);
 
-    private:
+      private:
         T _value;
         Node *_pre;
         Node *_next;
     };
 
-public:
-Queue();
-~Queue();
-void push(const T &item);
-T pop();
-bool empty();
-size_t size();
-private:
+  public:
+    Queue();
+    ~Queue();
+    void push(const T &item);
+    T pop();
+    bool empty();
+    size_t size();
+
+  private:
     Node<T> *_head;
     Node<T> *_tail;
 };

@@ -1,11 +1,11 @@
-#include<iostream>
-#include<string>
-#include<algorithm>
-#include<iterator>
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <iterator>
 
 using namespace std;
 
-template<int N>
+template <int N>
 void print(char (&a)[N])
 {
     cout << "has " << N << " chars: " << endl;

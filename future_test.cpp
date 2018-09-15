@@ -1,7 +1,7 @@
-#include<iostream>
-#include<future>
-#include<thread>
-#include<string>
+#include <iostream>
+#include <future>
+#include <thread>
+#include <string>
 
 using namespace std;
 

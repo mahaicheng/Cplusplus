@@ -1,16 +1,16 @@
-#include<iostream>
-#include<thread>
-#include<mutex>
-#include<memory>
+#include <iostream>
+#include <thread>
+#include <mutex>
+#include <memory>
 
 using namespace std;
 
 class Singleton
 {
-public:
+  public:
     Singleton(const Singleton &) = delete;
 
-    static Singleton* get_instance()
+    static Singleton *get_instance()
     {
         call_once(f, init);
         return p;
@@ -19,7 +19,8 @@ public:
     {
         return x;
     }
-private:
+
+  private:
     Singleton() = default;
 
     static void init()

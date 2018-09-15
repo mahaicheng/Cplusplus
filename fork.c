@@ -5,12 +5,12 @@
 	> 创建日期: 2016年03月27日 星期日 10时56分00秒
  ************************************************************************/
 
-#include<stdio.h>
-#include<apue.h>
+#include <stdio.h>
+#include <apue.h>
 
 int main()
 {
-    if(fork() == 0)
+    if (fork() == 0)
     {
         write(1, "libo", 3);
     }
@@ -19,6 +19,6 @@ int main()
         printf("wang");
         waitpid(-1, NULL, 0);
     }
- 
+
     write(1, "bo", 3);
 }

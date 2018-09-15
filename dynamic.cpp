@@ -1,13 +1,13 @@
-#include<iostream>
-#include<string>
-#include<memory>
-#include<cassert>
+#include <iostream>
+#include <string>
+#include <memory>
+#include <cassert>
 
 using namespace std;
 
 class Animal
 {
-public:
+  public:
     virtual int age() const
     {
         return num;
@@ -17,7 +17,7 @@ public:
 
 class Fish : public Animal
 {
-public:
+  public:
     int age() const
     {
         return age_;

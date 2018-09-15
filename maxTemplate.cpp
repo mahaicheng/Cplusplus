@@ -1,22 +1,22 @@
-#include<iostream>
-#include<cstring>
-#include<string>
+#include <iostream>
+#include <cstring>
+#include <string>
 
 using namespace std;
 
-template<typename T>
-inline T const & max(T const &lhs, const T &rhs)
+template <typename T>
+inline T const &max(T const &lhs, const T &rhs)
 {
     return lhs < rhs ? rhs : lhs;
 }
 
-template<typename T>
-inline T* const max(T *const lhs, T *const rhs)
+template <typename T>
+inline T *const max(T *const lhs, T *const rhs)
 {
     return *lhs < *rhs ? rhs : lhs;
 }
 
-inline char const * const& max(const char *const &lhs, const char *const &rhs)
+inline char const *const &max(const char *const &lhs, const char *const &rhs)
 {
     return strcmp(lhs, rhs) < 0 ? rhs : lhs;
 }

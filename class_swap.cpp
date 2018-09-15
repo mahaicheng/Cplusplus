@@ -1,13 +1,13 @@
-#include<iostream>
-#include<string>
-#include<algorithm>
+#include <iostream>
+#include <string>
+#include <algorithm>
 
 using namespace std;
 
 class A
 {
-public:
-    A(int x_ = 0) : x(new int(x_)) { }
+  public:
+    A(int x_ = 0) : x(new int(x_)) {}
     ~A()
     {
         if (x != nullptr)
@@ -25,11 +25,11 @@ public:
         using std::swap;
         swap(x, rhs.x);
     }
-    A& operator=(const A &rhs)
+    A &operator=(const A &rhs)
     {
         if (this != &rhs)
         {
-            A tmp(*(rhs.x));    //异常安全
+            A tmp(*(rhs.x)); //锟届常锟斤拷全
             swap(tmp);
         }
         return *this;

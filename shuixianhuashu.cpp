@@ -1,5 +1,5 @@
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -39,7 +39,7 @@ int main()
             }
         }
 
-        if(!hasAnyValid)
+        if (!hasAnyValid)
             cout << "no";
 
         cout << endl;

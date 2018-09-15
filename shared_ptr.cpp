@@ -5,23 +5,21 @@
 	> 创建日期: 2016年05月20日 星期五 18时13分02秒
  ************************************************************************/
 
-#include<iostream>
-#include<utility>
-#include<memory>
-#include<string>
+#include <iostream>
+#include <utility>
+#include <memory>
+#include <string>
 
 using namespace std;
 
 class Person
 {
-    friend ostream& operator<<(ostream &, const shared_ptr<Person> &);
+    friend ostream &operator<<(ostream &, const shared_ptr<Person> &);
 
-public:
-    Person(const string &name = string("invalid name"), int age = -1) : 
-            name_(name), 
-            age_(age) 
+  public:
+    Person(const string &name = string("invalid name"), int age = -1) : name_(name),
+                                                                        age_(age)
     {
-
     }
 
     void release()
@@ -30,12 +28,12 @@ public:
     }
     virtual ~Person() = default;
 
-private:
+  private:
     string name_;
     int age_;
 };
 
-ostream& operator<<(ostream &os, const shared_ptr<Person> &personPtr)
+ostream &operator<<(ostream &os, const shared_ptr<Person> &personPtr)
 {
     os << "[" << personPtr->name_ << " : " << personPtr->age_ << "]";
     return os;
@@ -49,5 +47,6 @@ int main()
     //shared_ptr<Person> b(new Person("Ma Dongmei", 25));
     shared_ptr<Person> b = make_shared<Person>("Ma Dongmei", 25);
 
-    cout << a << endl << b << endl;
+    cout << a << endl
+         << b << endl;
 }

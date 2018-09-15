@@ -5,11 +5,11 @@
 	> 创建日期: 2016年04月15日 星期五 15时46分14秒
  ************************************************************************/
 
-#include<iostream>
-#include<string>
-#include<initializer_list>
-#include<iterator>
-#include<vector>
+#include <iostream>
+#include <string>
+#include <initializer_list>
+#include <iterator>
+#include <vector>
 
 using namespace std;
 
@@ -33,24 +33,24 @@ void typeHelper(const string &a, string b)
     cout << "string: " << a << endl;
 }
 
-template<typename T>
+template <typename T>
 void typeHelper(const T *a, size_t N)
 {
     cout << "C-array: ";
-    for(int i = 0; i < N; ++i)
+    for (int i = 0; i < N; ++i)
     {
         cout << a[i] << " ";
     }
     cout << endl;
 }
 
-template<typename T>
+template <typename T>
 void type(const T &a)
 {
     typeHelper(a, T());
 }
 
-template<typename T, size_t N>
+template <typename T, size_t N>
 void type(const T (&a)[N])
 {
     typeHelper(a, N);
@@ -63,7 +63,7 @@ int main()
     type("mahaicheng");
     type(string("mahaicheng"));
 
-    int a[]{1,2,3,4,5,4};
+    int a[]{1, 2, 3, 4, 5, 4};
     type(a);
 
     string name[]{"mahaicheng", "madongmei", "liuchunling", "machengjian"};

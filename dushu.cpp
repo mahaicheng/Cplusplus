@@ -1,5 +1,5 @@
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -28,15 +28,15 @@ int main()
                     cout << gewei[num] << endl;
                     break;
                 }
-                else    // 10 <= num < 20
+                else // 10 <= num < 20
                 {
                     result += "shi";
-                    result += gewei[num%10];
+                    result += gewei[num % 10];
                     cout << result << endl;
                     break;
                 }
             }
-            else    // 20 <= num < 100
+            else // 20 <= num < 100
             {
                 int shi = num / 10;
                 int ge = num % 10;
@@ -77,4 +77,3 @@ int main()
         }
     }
 }
-

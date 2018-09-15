@@ -5,24 +5,25 @@
 	> 创建日期: 2016年04月27日 星期三 16时11分47秒
  ************************************************************************/
 
-#include<iostream>
-#include<algorithm>
-#include<iterator>
-#include<initializer_list>
+#include <iostream>
+#include <algorithm>
+#include <iterator>
+#include <initializer_list>
 
 using namespace std;
 
-class Int 
+class Int
 {
-public:
-    Int(int val) : m_val(val) {  }
+  public:
+    Int(int val) : m_val(val) {}
 
     operator int()
     {
         return m_val;
     }
-private:
-private:
+
+  private:
+  private:
     int m_val;
 };
 

@@ -1,5 +1,5 @@
-#include<iostream>
-#include<functional>
+#include <iostream>
+#include <functional>
 
 using namespace std;
 

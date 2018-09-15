@@ -5,16 +5,16 @@
 	> 创建日期: 2016年05月16日 星期一 09时38分33秒
  ************************************************************************/
 
-#include<iostream>
-#include<set>
-#include<algorithm>
-#include<iterator>
+#include <iostream>
+#include <set>
+#include <algorithm>
+#include <iterator>
 
 using namespace std;
 
 int main()
 {
-    set<int> iSet{8,7,9,3,1,2,6,5,4,0};
+    set<int> iSet{8, 7, 9, 3, 1, 2, 6, 5, 4, 0};
     copy(iSet.begin(), iSet.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 
