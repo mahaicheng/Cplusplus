@@ -1,3 +1,6 @@
 *.o
 *.tr
 *.exe
+.vs
+.vscode
+.idea
