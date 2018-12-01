@@ -1,32 +1,23 @@
-#include <iostream>
-#include <string>
-#include <memory>
 #include <cassert>
+#include <iostream>
+#include <memory>
+#include <string>
 
 using namespace std;
 
-class Animal
-{
-  public:
-    virtual int age() const
-    {
-        return num;
-    }
-    int num;
+class Animal {
+ public:
+  virtual int age() const { return num; }
+  int num;
 };
 
-class Fish : public Animal
-{
-  public:
-    int age() const
-    {
-        return age_;
-    }
-    int age_ = 9;
+class Fish : public Animal {
+ public:
+  int age() const { return age_; }
+  int age_ = 9;
 };
 
-int main()
-{
-    shared_ptr<Animal> ap(make_shared<Fish>());
-    cout << dynamic_pointer_cast<Fish>(ap)->age_ << endl;
+int main() {
+  shared_ptr<Animal> ap(make_shared<Fish>());
+  cout << dynamic_pointer_cast<Fish>(ap)->age_ << endl;
 }

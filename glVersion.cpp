@@ -1,26 +1,29 @@
 #include <Windows.h>
-#include <stdio.h>
 #include <gl/gl.h>
+#include <stdio.h>
 //#include <GL/glut.h>
 
-int main(int argc, char **argv)
-{
-    glutInit(&argc, argv);
-    //ÏÔÊ¾Ä£Ê½³õÊ¼»¯
-    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);
-    //¶¨Òå´°¿Ú´óĞ¡
-    glutInitWindowSize(300, 300);
-    //¶¨Òå´°¿ÚÎ»ÖÃ
-    glutInitWindowPosition(100, 100);
-    //´´½¨´°¿Ú
-    glutCreateWindow("OpenGL Version");
-    const GLubyte *name = glGetString(GL_VENDOR);           //·µ»Ø¸ºÔğµ±Ç°OpenGLÊµÏÖ³§ÉÌµÄÃû×Ö
-    const GLubyte *biaoshifu = glGetString(GL_RENDERER);    //·µ»ØÒ»¸öäÖÈ¾Æ÷±êÊ¶·û£¬Í¨³£ÊÇ¸öÓ²¼şÆ½Ì¨
-    const GLubyte *OpenGLVersion = glGetString(GL_VERSION); //·µ»Øµ±Ç°OpenGLÊµÏÖµÄ°æ±¾ºÅ
-    const GLubyte *gluVersion = gluGetString(GLU_VERSION);  //·µ»Øµ±Ç°GLU¹¤¾ß¿â°æ±¾
-    printf("OpenGLÊµÏÖ³§ÉÌµÄÃû×Ö£º%s\n", name);
-    printf("äÖÈ¾Æ÷±êÊ¶·û£º%s\n", biaoshifu);
-    printf("OpenGLÊµÏÖµÄ°æ±¾ºÅ£º%s\n", OpenGLVersion);
-    printf("OGLU¹¤¾ß¿â°æ±¾£º%s\n", gluVersion);
-    return 0;
+int main(int argc, char **argv) {
+  glutInit(&argc, argv);
+  //æ˜¾ç¤ºæ¨¡å¼åˆå§‹åŒ–
+  glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);
+  //å®šä¹‰çª—å£å¤§å°
+  glutInitWindowSize(300, 300);
+  //å®šä¹‰çª—å£ä½ç½®
+  glutInitWindowPosition(100, 100);
+  //åˆ›å»ºçª—å£
+  glutCreateWindow("OpenGL Version");
+  const GLubyte *name =
+      glGetString(GL_VENDOR);  //è¿”å›è´Ÿè´£å½“å‰OpenGLå®ç°å‚å•†çš„åå­—
+  const GLubyte *biaoshifu =
+      glGetString(GL_RENDERER);  //è¿”å›ä¸€ä¸ªæ¸²æŸ“å™¨æ ‡è¯†ç¬¦ï¼Œé€šå¸¸æ˜¯ä¸ªç¡¬ä»¶å¹³å°
+  const GLubyte *OpenGLVersion =
+      glGetString(GL_VERSION);  //è¿”å›å½“å‰OpenGLå®ç°çš„ç‰ˆæœ¬å·
+  const GLubyte *gluVersion =
+      gluGetString(GLU_VERSION);  //è¿”å›å½“å‰GLUå·¥å…·åº“ç‰ˆæœ¬
+  printf("OpenGLå®ç°å‚å•†çš„åå­—ï¼š%s\n", name);
+  printf("æ¸²æŸ“å™¨æ ‡è¯†ç¬¦ï¼š%s\n", biaoshifu);
+  printf("OpenGLå®ç°çš„ç‰ˆæœ¬å·ï¼š%s\n", OpenGLVersion);
+  printf("OGLUå·¥å…·åº“ç‰ˆæœ¬ï¼š%s\n", gluVersion);
+  return 0;
 }

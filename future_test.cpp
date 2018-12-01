@@ -1,17 +1,13 @@
-#include <iostream>
 #include <future>
-#include <thread>
+#include <iostream>
 #include <string>
+#include <thread>
 
 using namespace std;
 
-string hello(string name)
-{
-    return "Hello, " + name;
-}
+string hello(string name) { return "Hello, " + name; }
 
-int main()
-{
-    auto ret = async(std::launch::async, hello, "Haicheng");
-    cout << ret.get() << endl;
+int main() {
+  auto ret = async(std::launch::async, hello, "Haicheng");
+  cout << ret.get() << endl;
 }
