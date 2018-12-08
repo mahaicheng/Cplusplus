@@ -36,3 +36,15 @@ tafjcedepend
 *.exe
 *.out
 *.app
+/hello
+/object
+/shared_ptr
+/strlen_test
+/testProtected
+/thread1
+/8.19
+/10.1
+/allFolds
+/array
+/echoServer/*
+/echoServer/*.kdev4
